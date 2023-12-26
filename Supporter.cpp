@@ -1,5 +1,5 @@
 //Member.cpp
-#include "Member.h"
+#include "Supporter.h"
 #include "Availability.h"
 #include <iostream>
 #include <numeric>
