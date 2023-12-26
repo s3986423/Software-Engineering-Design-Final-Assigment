@@ -1,7 +1,7 @@
 #ifndef SCHEDULEMANAGER_H
 #define SCHEDULEMANAGER_H
 
-#include "availability.h"
+#include "Availability.h"
 #include <vector>
 #include <ctime>
 
