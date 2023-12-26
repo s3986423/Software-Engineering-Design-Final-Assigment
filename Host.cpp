@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "Host.h"
 
 class Review {
     // Review class implementation
