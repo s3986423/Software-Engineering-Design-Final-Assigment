@@ -1,4 +1,4 @@
-#include "admin.h"
+#include "Admin.h"
 #include <iostream>
 
 Admin::Admin(std::vector<Member>& membersVector) : members(membersVector) {}

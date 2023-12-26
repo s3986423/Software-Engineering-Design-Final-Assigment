@@ -1,6 +1,6 @@
 //Member.cpp
-#include "Supporter.h"
-#include "Availability.h"
+#include "../include/Supporter.h"
+#include "../include/Availability.h"
 #include <iostream>
 #include <numeric>
 

@@ -1,4 +1,4 @@
-#include "availability.h"
+#include "Availability.h"
 #include <iostream>
 #include <iomanip>
 
