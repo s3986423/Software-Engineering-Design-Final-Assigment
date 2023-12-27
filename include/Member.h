@@ -26,6 +26,7 @@ public:
     vector<int> supporterRatingScore, map<string, vector<int>> skills, vector<Review*> allSupporterReviews,  //inherit from Supporter
     vector<int> hostRatingScore, vector<Review*> allHostReviews); //inherit from Host
     ~Member();
+    string getUsername() const { return userName; }
 
     void performTopUp(int amount);
     void showSupporterAllReviews(Supporter* supporter);

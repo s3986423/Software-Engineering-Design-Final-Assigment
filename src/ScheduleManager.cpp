@@ -1,4 +1,4 @@
-#include "ScheduleManager.h"
+#include "../include/ScheduleManager.h"
 #include <iostream>
 
 ScheduleManager::ScheduleManager(const std::vector<Availability>& availList) 
