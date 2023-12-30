@@ -4,7 +4,7 @@
 #include <iostream>
 #include <numeric>
 
-double Member::getAverageSkillRating(std::string skillName) {
+double Supporter::getAverageSkillRating(std::string skillName) {
     auto it = skills.find(skillName);
     if (it != skills.end()) {
         double sum = std::accumulate(it->second.begin(), it->second.end(), 0.0);
@@ -15,7 +15,7 @@ double Member::getAverageSkillRating(std::string skillName) {
     }
 }
 
-double Member::getAverageSupporterRating() {
+double Supporter::getAverageSupporterRating() {
     if (!supporterRatingScore.empty()) {
         double sum = std::accumulate(supporterRatingScore.begin(), supporterRatingScore.end(), 0.0);
         return sum / supporterRatingScore.size();
@@ -25,13 +25,13 @@ double Member::getAverageSupporterRating() {
     }
 }
 
-Availability Member::listAvailability() {
+Availability Supporter::listAvailability() {
     // Implement the method here
     // For example:
     // 1. Return the supporter's availability
 }
 
-Availability Member::unlistAvailability() {
+Availability Supporter::unlistAvailability() {
     // Implement the method here
     // For example:
     // 1. Remove the supporter's availability and return it
