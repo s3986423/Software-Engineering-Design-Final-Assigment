@@ -36,19 +36,11 @@ Member::Member(/*Member attributes*/
             /*Supporter's*/
             Supporter(supporterRatingScoreInput, skillsInput, allSupporterReviewsInput),
             /*Host's*/
-            Host(hostRatingScoreInput, allHostReviewsInput)
-{
-    // Clear the vectors and map
-    this->supporterRatingScore.clear();
-    this->skills.clear();
-    this->allSupporterReviews.clear();
-    this->hostRatingScore.clear();
-    this->allHostReviews.clear();
-};
+            Host(hostRatingScoreInput, allHostReviewsInput){};
 
 Member::~Member()
 {
-}
+};
 
 /*Overloaded Constructor 1 - 7 Member attributes*/
 Member::Member(string userNameInput, 
@@ -69,7 +61,7 @@ Member::Member(string userNameInput,
     Host(vector<int>(), vector<Review*>())
 {
     // Initialize other attributes as needed
-}
+};
 
 /*Overloaded Constructor 2 - 7 Member attributes and supporter skills*/
 Member::Member(string userNameInput, 
@@ -91,7 +83,7 @@ Member::Member(string userNameInput,
     Host(vector<int>(), vector<Review*>())
 {
     // Initialize other attributes as needed
-}
+};
 
 
 /*Perform top up method*/
