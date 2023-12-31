@@ -105,4 +105,37 @@ void Member::performTopUp(){
     cout << "Please input your top up amount in dollars: ";
     cin >> amountInput;
     this->creditPoint += amountInput;
-}
+    cout << "Top up successful! Returning...";
+    return;
+};
+
+/*Show all Supporter reviews method*/
+void Member::showSupporterAllReviews(Supporter* supporter){
+    /*Show reviews of another supporter*/
+    for (Review* review : (supporter->allSupporterReviews)) {
+        review->showReview();
+        cout << "End of reviews list! Returning..." << '\n';
+    }
+
+    // /*Show reviews of this supporter*/
+    // for (Review* review : (this->allSupporterReviews))
+    // {
+    //     review->showReview();
+    //     cout << "End of reviews list! Returning..." << '\n';
+    // }
+};
+
+/*Show all Host reviews method*/
+void Member::showHostAllReviews(Host* host){
+    /*Show reviews of another host*/
+    for (Review* review : (host->allHostReviews)) {
+        review->showReview();
+        cout << "End of reviews list! Returning..." << '\n';
+    }
+
+    // /*Show reviews of this host*/
+    // for (Review* review : (this->allHostReviews)) {
+    //     review->showReview();
+    //     cout << "End of reviews list! Returning..." << '\n';
+    // }
+};
