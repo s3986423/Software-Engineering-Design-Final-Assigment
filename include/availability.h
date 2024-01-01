@@ -25,6 +25,7 @@ public:
     Member* getSupporter() const { return supporter; }
     int getConsumingPointerPerHour() const { return consumingPointerPerHour; }
     const std::vector<std::string>& getSkills() const { return skills; }
+    bool operator==(const Availability& other) const;
 };
 
 #endif

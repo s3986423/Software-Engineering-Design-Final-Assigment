@@ -17,3 +17,13 @@ void Availability::showInfo() const {
     std::cout << "\nSupporter: " << (supporter ? supporter->getUsername() : "None") << "\n";
     std::cout << "Minimum Required Host Score: " << minimumRequiredHostScore << "\n";
 }
+
+bool Availability::operator==(const Availability& other) const {
+    // Compare the relevant attributes
+    return startTime == other.startTime
+        && endTime == other.endTime
+        && consumingPointerPerHour == other.consumingPointerPerHour
+        && skills == other.skills
+        && supporter == other.supporter
+        && minimumRequiredHostScore == other.minimumRequiredHostScore;
+}
