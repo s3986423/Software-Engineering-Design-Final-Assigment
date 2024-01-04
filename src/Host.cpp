@@ -2,14 +2,23 @@
 #include <vector>
 #include "../include/Host.h"
 
-int main() {
-    // Test the Host class
-    Host host;
+double getAverageHostRating() {
+        double average = 0.0;
+        if (!hostRatingScore.empty()) {
+            int sum = 0;
+            for (int rating : hostRatingScore) {
+                sum += rating;
+            }
+            average = static_cast<double>(sum) / hostRatingScore.size();
+        }
+        return average;
+    }
 
-    // Call the methods
-    double averageRating = host.getAverageHostRating();
-    bool isAvailable = host.bookAvailability();
-    host.showAllAvailableSupporters("", "");
+bool bookAvailability() {
+        // Check for availability logic
+        return true; // Placeholder return value
+    }
 
-    return 0;
-}
+void showAllAvailableSupporters(const std::string& fromTime, const std::string& toTime) {
+        // Show available supporters logic
+    }
