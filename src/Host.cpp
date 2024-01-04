@@ -2,7 +2,7 @@
 #include <vector>
 #include "../include/Host.h"
 
-double getAverageHostRating() {
+double Host::getAverageHostRating() {
         double average = 0.0;
         if (!hostRatingScore.empty()) {
             int sum = 0;
@@ -14,7 +14,7 @@ double getAverageHostRating() {
         return average;
     }
 
-bool bookAvailability() {
+bool Host::bookAvailability() {
         // Check for availability logic
         return true; // Placeholder return value
     }
