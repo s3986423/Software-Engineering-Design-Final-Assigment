@@ -19,6 +19,7 @@ Member::Member(/*Member attributes*/
             string passwordInput = "", 
             string homeAddressInput = "",
             int creditPointInput = 0,
+            vector<string> blockedMemberInput = vector<string>(),
 
             /*Supporter attributes*/
             vector<int> supporterRatingScoreInput = vector<int>(),
@@ -32,7 +33,7 @@ Member::Member(/*Member attributes*/
             /*Member's*/
             : userName(userNameInput), fullName(fullNameInput), 
             phoneNumber(phoneNumberInput), email(emailInput), 
-            password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput),
+            password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput), blockedMember(blockedMemberInput),
             /*Supporter's*/
             Supporter(supporterRatingScoreInput, skillsInput, allSupporterReviewsInput),
             /*Host's*/
@@ -43,18 +44,18 @@ Member::~Member()
 };
 
 /*Overloaded Constructor 1 - 7 Member attributes*/
-Member::Member(string userNameInput, 
-            string fullNameInput, 
-            string phoneNumberInput, 
-            string emailInput, 
-            string passwordInput, 
-            string homeAddressInput, 
-            int creditPointInput)
+Member::Member(string userNameInput = "", 
+            string fullNameInput = "", 
+            string phoneNumberInput = "", 
+            string emailInput = "", 
+            string passwordInput = "", 
+            string homeAddressInput = "", 
+            int creditPointInput = 0)
     
     /*Member's*/
     : userName(userNameInput), fullName(fullNameInput), 
     phoneNumber(phoneNumberInput), email(emailInput), 
-    password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput),
+    password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput), blockedMember(vector<string>()),
     /*Supporter's*/
     Supporter(vector<int>(), map<string, vector<int>>(), vector<Review*>()),
     /*Host's*/
@@ -65,18 +66,18 @@ Member::Member(string userNameInput,
 
 /*Overloaded Constructor 2 - 7 Member attributes and supporter skills*/
 Member::Member(string userNameInput, 
-            string fullNameInput, 
-            string phoneNumberInput, 
-            string emailInput, 
-            string passwordInput, 
-            string homeAddressInput, 
-            int creditPointInput, 
+            string fullNameInput = "", 
+            string phoneNumberInput = "", 
+            string emailInput = "", 
+            string passwordInput = "", 
+            string homeAddressInput = "", 
+            int creditPointInput = 0,
             map<string, vector<int>> skillsInput)
 
     /*Member's*/
     : userName(userNameInput), fullName(fullNameInput), 
     phoneNumber(phoneNumberInput), email(emailInput), 
-    password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput),
+    password(passwordInput), homeAddress(homeAddressInput), creditPoint(creditPointInput), blockedMember(vector<string>()),
     /*Supporter's*/
     Supporter(vector<int>(), skillsInput, vector<Review*>()),
     /*Host's*/
@@ -139,3 +140,12 @@ void Member::showHostAllReviews(Host* host){
     //     cout << "End of reviews list! Returning..." << '\n';
     // }
 };
+
+// /*Block a Member - 2 ways block*/
+// void Member::blockMember(Member* member){
+//     if (member->getUsername() == )
+//     {
+//         /* code */
+//     }
+    
+// }

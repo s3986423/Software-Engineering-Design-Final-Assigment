@@ -21,6 +21,7 @@ public:
     bool bookAvailability();
     void showAllAvailableSupporters(int fromTime, int toTime);
 
+friend class Member;
 };
 
 #endif

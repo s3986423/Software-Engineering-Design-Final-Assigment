@@ -22,7 +22,7 @@ HostReview::~HostReview(){};
 
 //Host's showReview() method
 void HostReview::showReview() {
-    cout << "-----Host Review-----" << '\n';
+    cout << "----Host Review----" << '\n';
     cout << "Host score: " << this->hostScore << '\n';
     cout << "Reviewer comment: " << this->comment << '\n';
     cout << "Reviewer: " << this->reviewer << '\n';
@@ -45,7 +45,7 @@ SupporterReview::~SupporterReview(){};
 
 //Supporter's showReview() method
 void SupporterReview::showReview() {
-    cout << "-----Supporter Review-----" << '\n';
+    cout << "----Supporter Review----" << '\n';
     cout << "Supporter score: " << this->supporterScore << '\n';
     cout << "Skill performed: " << this->skillName << '\n';
     cout << "Skill score: " << this->skillScore << '\n';

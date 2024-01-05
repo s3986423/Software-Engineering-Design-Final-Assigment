@@ -21,9 +21,10 @@ private:
     string password;
     string homeAddress;
     int creditPoint;
+    vector<string> blockedMember;
 public:
     /*Orignal Constructor*/
-    Member(string userName, string fullName, string phoneNumber, string email, string password, string homeAddress, int creditPoint,
+    Member(string userName, string fullName, string phoneNumber, string email, string password, string homeAddress, int creditPoint, vector<string> blockedMember,
     vector<int> supporterRatingScore, map<string, vector<int>> skills, vector<Review*> allSupporterReviews,  //inherit from Supporter
     vector<int> hostRatingScore, vector<Review*> allHostReviews); //inherit from Host
     
@@ -42,11 +43,12 @@ public:
         string email, 
         string password, 
         string homeAddress, 
-        int creditPoint, 
+        int creditPoint,
         map<string, vector<int>> skills); //7 Member attributes and supporter skills
 
     /*Destructor*/
     ~Member();
+
     string getUsername() const { return userName; }
     int getCreditPoint() const { return creditPoint; }
 
