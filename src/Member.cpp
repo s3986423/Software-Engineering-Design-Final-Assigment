@@ -149,3 +149,25 @@ void Member::showHostAllReviews(Host* host){
 //     }
     
 // }
+
+Member::Member(/* parameters */) {
+    // Initialize creditPoint
+    creditPoint = 0; // or some initial value
+}
+
+void Member::addPoints(int points) {
+    creditPoint += points;
+}
+
+void Member::deductPoints(int points) {
+    if (points > creditPoint) {
+        // Handle the case where there aren't enough points
+        // For example, throw an error or set creditPoint to zero
+        return;
+    }
+    creditPoint -= points;
+}
+
+int Member::getcreditPoint() const {
+    return creditPoint;
+}

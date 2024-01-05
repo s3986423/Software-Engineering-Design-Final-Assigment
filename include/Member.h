@@ -48,9 +48,13 @@ public:
 
     /*Destructor*/
     ~Member();
+    Member(/* parameters */);
 
     string getUsername() const { return userName; }
     int getCreditPoint() const { return creditPoint; }
+    void addPoints(int points);
+    void deductPoints(int points);
+    int getcreditPoint() const;
 
     void performTopUp();
     void showSupporterAllReviews(Supporter* supporter);
